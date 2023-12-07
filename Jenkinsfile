@@ -27,7 +27,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo 'Testing '
+                echo 'Testing'
                 script {
                     def url = 'https://abe-webapp-dev-jenkins.s3.ap-northeast-1.amazonaws.com/index.html'
                     def response = sh(script: "curl -s -o /dev/null -w '%{http_code}' '$url'", returnStdout: true)
