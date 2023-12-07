@@ -27,7 +27,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo 'Testing'
+                echo 'Testing '
                 script {
                     def url = 'ObjectURL'
                     def response = sh(script: "curl -s -o /dev/null -w '%{http_code}' '$url'", returnStdout: true)
